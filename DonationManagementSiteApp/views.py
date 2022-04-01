@@ -34,8 +34,8 @@ def signed_up(request):
 
     else:
 
-        query2 = "insert into volunteer (username, phonenumber, email, password, aadharimage, address) values (%s, %s, %s, %s)"
-        values2 = (username, phonenumber, email, password, LOAD_FILE('aadhar_image'), address)
+        query2 = "insert into volunteer (username, phonenumber, email, password) values (%s, %s, %s, %s)"
+        values2 = (username, phonenumber, email, password)
         cursor.execute(query2, values2)
         return render(request, "Successfulpopup.html")
 
