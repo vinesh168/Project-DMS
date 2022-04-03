@@ -9,7 +9,7 @@
 <body>
   <div class="container">
 
-    <form action="/signed-up" >
+    <form action="/signed-up" method="post" enctype="multipart/form-data">
       <h3>Sign-Up for Volunteer</h3>
 
       <div class="input-group">
@@ -44,7 +44,7 @@
 
       <div class="input-group">
           <label>Upload Aadhar Image</label>
-          <input type="file" placeholder="Repeat password" name="user-aadhar-image">
+          <input type="file" placeholder="Repeat password" name="user-aadhar-image" accept="image/*"  required>
 
       </div>
 

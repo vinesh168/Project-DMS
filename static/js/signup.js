@@ -80,6 +80,7 @@ function validateRpassword() {
     }
 }
 
+
 function validateForm(){
     if(!validateName() || !validatePhone() || !validateEmail() || !validatePassword() || !validateRpassword()){
         submitError.style.display = 'block';
