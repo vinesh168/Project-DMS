@@ -18,13 +18,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from DonationManagementSiteApp.views import homepage, loginOptions, signup_page, signed_up, loged_in
+from DonationManagementSiteApp.views import homepage, loginOptions, signup_page, vol_signed_up, vol_loged_in
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('homepage', homepage),
     path('loginOptions', loginOptions),
     path('signup-page', signup_page),
-    path('signed-up', signed_up),
-    path('dashboard', loged_in),
+    path('vol-signed-up', vol_signed_up),
+    path('dashboard', vol_loged_in),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
