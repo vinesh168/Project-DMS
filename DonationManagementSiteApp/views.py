@@ -6,7 +6,7 @@ from django.db import connection
 from .models import Volunteer
 import os
 
-val = None
+val = ''
 
 
 # Create your views here.
@@ -57,6 +57,7 @@ def vol_signed_up(request):
 
 
 def vol_loged_in(request):
+    global val
     email = request.POST['email']
     password = request.POST['password']
 
@@ -67,11 +68,9 @@ def vol_loged_in(request):
 
     if data is not None:
         if password == data[4]:
-            global val
-
-            def val():
-                return email
-
+            if email not in val:
+                for i in email:
+                    val = val + i
             data = {"username": data[1]}
             return render(request, 'dashboard.html', data)
         else:
@@ -79,13 +78,23 @@ def vol_loged_in(request):
 
 
 def vol_profile_info(request):
-    gl_email = val()
+    global val
+    gl_email = val
 
     cursor = connection.cursor()
     query1 = "select * from donationmanagementsiteapp_volunteer where email= '" + gl_email + "'"
     cursor.execute(query1)
     data = cursor.fetchone()
     if data is not None:
-        return HttpResponse('hello')
+        info={
+            "username": data[1],
+            "phonenumber": data[2],
+            "email": data[3],
+            "aadhar_image_path": data[5],
+            "address": data[6],
+            "city": data[7],
+            "state": data[8],
+        }
+        return render(request,'profileinfo.html',info)
     else:
         return HttpResponse('no data')
