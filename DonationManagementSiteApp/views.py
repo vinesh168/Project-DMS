@@ -19,7 +19,7 @@ def loginOptions(request):
     return render(request, 'loginOptions.html')
 
 
-def signup_page(request):
+def vol_signup_page(request):
     return render(request, 'signup.html')
 
 

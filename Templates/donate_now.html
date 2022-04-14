@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donate Now</title>
+    <link rel="stylesheet" href="\static\donate_now.css">
+</head>
+<body>
+  <a href="#"><h1>Donation Management System</h1></a>
+<div class="sidebar">
+  <a class="active" href="#">Donar : {{fname}} {{lname}}</a>
+  <a href="/donordashboard">Donor Dash Board</a>
+  <a href="/donatenow">Donate Now</a>
+  <a href="/profile">Profile</a>
+  <a href="#">Logout</a>
+</div>
+<div class="main">
+  <h2>Donate Now</h2>
+<form action="">
+<label for="dname" class="form-label"><b>Donation Name</label>
+<br>
+<select class="form-select" aria-label="Default select example" required>
+    <option value="Food Donation">Food Donation</option>
+    <option value="Cloth Donation">Cloth Donation</option>
+    <option value="Footwear Donation">Footwear Donation</option>
+    <option value="Book Donation">Book Donation</option>
+    <option value="Furniture Donation">Furniture Donation</option>
+    <option value="Vessel Donation">Vessel Donation</option>
+    <option value="other Donation">other Donation</option>
+  </select>
+  <div class="text1">
+    <label for="ico" class="form-label"><b>If Choosen Other Please Specify</label>
+    <br>
+    <textarea class="form-control" id="one" rows="3" required></textarea>
+  </div>
+  <div class="text2">
+    <label for="dcarea" class="form-label"><b>Donation Collection Area</label>
+    <br>
+    <textarea class="form-control" id="two" rows="3" required></textarea>
+  </div>
+  <div class="text3">
+    <label for="dsn" class="form-label"><b>Description Special Notes</label>
+    <br>
+    <textarea class="form-control" id="three" rows="3"></textarea>
+  </div>
+  <div class="btn">
+  <button type="button" class="button">Submit</button>
+  </div>
+</form>
+</div>
+</body>
+</html>

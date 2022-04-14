@@ -1,0 +1,111 @@
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #1C3BE1;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+.main{
+  margin-left:20%;
+}
+h1{
+    background: #cccaca;
+    margin-top: -10.56px;
+    padding-top: 20px;
+    padding-bottom: 14px;
+    color:black;
+  }
+.form-control{
+    width: 990px;
+    height: 89px;
+}
+.text1{
+    margin-top:30px;
+}
+.text2{
+    margin-top:30px;
+}
+.text3{
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+body{
+    background: #eadb00;
+    color: #df1313;
+      background-image: url(https://public-assets.typeform.com/public/mega-menu/helpcenter.png);
+
+}
+h2{
+    color: #3e2d2d;
+}
+.button{
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.button:hover{
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+.form-select{
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+h5{
+  font-size: 44px;
+}
